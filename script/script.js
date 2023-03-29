@@ -3,12 +3,19 @@
 //utilizzando i data.
 
 
-const { createApp } = Vue
+const { createApp } = Vue;
 
 createApp({
 	data() {
 		return {
-			message: 'Hello Vue!'
+			message: 'Hello Vue!',
+			myClass: 'bg-primary text-center',
+			image: "./img/01.webp"
 		}
+	},
+	methods: {
+		changeColor() {
+			this.myClass = 'green text-center';
 	}
+}
 	}).mount('#app')
